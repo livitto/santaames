@@ -12,7 +12,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="relative z-10 bg-gradient-to-b from-[#B71C1C] to-[#8B0000] text-white py-12">
+    <footer id="contact" className="relative z-10 bg-gradient-to-b from-[#B71C1C] to-[#8B0000] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -27,16 +27,16 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-xl font-bold mb-4">Contact</h4>
             <div className="space-y-3">
-              <a href="tel:555-0123" className="flex items-center gap-2 hover:text-[#FFD700] transition-colors">
+              <a href="tel:515-509-1059" className="flex items-center gap-2 hover:text-[#FFD700] transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>(555) 555-0123</span>
+                <span>(515) 509-1059</span>
               </a>
               <a
-                href="mailto:santa@santadave.com"
+                href="mailto:santaames@yahoo.com"
                 className="flex items-center gap-2 hover:text-[#FFD700] transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>santa@santadave.com</span>
+                <span>santaames@yahoo.com</span>
               </a>
             </div>
           </div>

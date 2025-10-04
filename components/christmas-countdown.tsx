@@ -58,7 +58,7 @@ export function ChristmasCountdown() {
 
   return (
     <div
-      className={`fixed top-4 right-4 z-50 bg-[#B71C1C] text-white px-4 py-3 rounded-lg shadow-lg border-2 border-[#FFD700] transition-opacity duration-200 ${
+      className={`fixed top-20 right-4 z-[100] bg-[#B71C1C] text-white px-4 py-3 rounded-lg shadow-lg border-2 border-[#FFD700] transition-opacity duration-200 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

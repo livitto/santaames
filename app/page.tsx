@@ -8,13 +8,15 @@ import { WheresSanta } from "@/components/wheres-santa"
 import { Footer } from "@/components/footer"
 import { ChristmasCountdown } from "@/components/christmas-countdown"
 import { SnowEffect } from "@/components/snow-effect"
+import { Navigation } from "@/components/navigation"
 
 export default function Home() {
   return (
     <>
       <SnowEffect />
       <ChristmasCountdown />
-      <main>
+      <Navigation />
+      <main className="pt-16">
         <Hero />
         <ClientLogos />
         <About />
