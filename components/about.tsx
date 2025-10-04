@@ -1,0 +1,93 @@
+import { Heart, Award, Users, ShieldCheck } from "lucide-react"
+
+export function About() {
+  return (
+    <section id="about" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Meet Santa Dave</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A Santa with an authentic beard and a heart for community
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed">
+              For 20 years, Dave has brought joy and wonder to countless families across Ames, Iowa. Following in the
+              footsteps of his father who served as Santa for 36 years, Dave carries on a legacy of authentic Christmas
+              magic that spans 56 years across two generations.
+            </p>
+
+            <p className="text-lg leading-relaxed">
+              With his genuine white beard and warm smile, Santa Dave has become a beloved fixture at community events,
+              schools, nursing homes, and private celebrations throughout the region. Dave is fully vetted and security
+              checked, giving families complete peace of mind.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-3 bg-[#B71C1C] rounded-full flex items-center justify-center">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <div className="font-serif text-2xl font-bold text-[#B71C1C]">56</div>
+                <div className="text-sm text-muted-foreground">Years Legacy</div>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-3 bg-[#1B5E20] rounded-full flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-white" />
+                </div>
+                <div className="font-serif text-2xl font-bold text-[#1B5E20]">20</div>
+                <div className="text-sm text-muted-foreground">Years Service</div>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-3 bg-[#FFD700] rounded-full flex items-center justify-center">
+                  <Users className="w-8 h-8 text-[#B71C1C]" />
+                </div>
+                <div className="font-serif text-2xl font-bold text-[#B71C1C]">1000s</div>
+                <div className="text-sm text-muted-foreground">Happy Families</div>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-3 bg-[#B71C1C] rounded-full flex items-center justify-center">
+                  <ShieldCheck className="w-8 h-8 text-white" />
+                </div>
+                <div className="font-serif text-2xl font-bold text-[#B71C1C]">✓</div>
+                <div className="text-sm text-muted-foreground">Vetted & Checked</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/images/santa-with-child.jpg"
+                alt="Santa Dave with child"
+                className="rounded-lg shadow-xl w-full h-64 object-cover"
+              />
+              <img
+                src="/images/santa-fireplace.jpg"
+                alt="Santa Dave by fireplace"
+                className="rounded-lg shadow-xl w-full h-64 object-cover mt-8"
+              />
+              <img
+                src="/images/santa-with-baby.jpg"
+                alt="Santa Dave with baby"
+                className="rounded-lg shadow-xl w-full h-64 object-cover -mt-8"
+              />
+              <img
+                src="/images/santa-and-mrs-claus.jpg"
+                alt="Santa Dave and Mrs. Claus"
+                className="rounded-lg shadow-xl w-full h-64 object-cover"
+              />
+            </div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#FFD700] rounded-full opacity-20 blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#B71C1C] rounded-full opacity-20 blur-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
