@@ -31,6 +31,10 @@ export function Hero() {
     setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)
   }
 
+  const scrollToBooking = () => {
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Carousel Background */}
@@ -101,6 +105,7 @@ export function Hero() {
 
         <Button
           size="lg"
+          onClick={scrollToBooking}
           className="bg-[#B71C1C] hover:bg-[#8B0000] text-white text-lg px-8 py-6 rounded-full shadow-2xl border-2 border-[#FFD700] font-bold"
         >
           Book Santa Dave
