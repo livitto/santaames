@@ -49,7 +49,7 @@ export function Navigation() {
             onClick={() => scrollToSection("#home")}
             className="font-serif text-2xl font-bold text-white hover:text-[#FFD700] transition-colors"
           >
-            Santa<span className="text-[#FFD700]">Ames</span>
+            Santaames
           </button>
 
           {/* Desktop Navigation */}

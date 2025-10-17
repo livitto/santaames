@@ -2,19 +2,20 @@
 
 import { Button } from "@/components/ui/button"
 import { Sparkles, ChevronLeft, ChevronRight } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import { SnowEffect } from "@/components/snow-effect"
 
 const carouselImages = [
-  { src: "/images/santa-fireplace.jpg", alt: "Santa Dave by the fireplace" },
-  { src: "/images/santa-with-elf-mrs-claus.jpg", alt: "Santa Dave with elf and Mrs. Claus" },
-  { src: "/images/santa-and-mrs-claus.jpg", alt: "Santa Dave and Mrs. Claus" },
-  { src: "/images/santa-with-baby.jpg", alt: "Santa Dave with baby" },
-  { src: "/images/santa-with-group.jpg", alt: "Santa Dave with group" },
-  { src: "/images/santa-with-child.jpg", alt: "Santa Dave with child" },
+  { src: "/images/hero-1.jpg", alt: "Santa Dave in sleigh with reindeer in downtown Ames" },
+  { src: "/images/hero-2.jpg", alt: "Santa Dave with child having snowball fun" },
+  { src: "/images/hero-3.jpg", alt: "Santa Dave with child in cozy home setting" },
+  { src: "/images/hero-4.jpg", alt: "Santa Dave in traditional setting with Christmas tree" },
+  { src: "/images/hero-5.jpg", alt: "Santa Dave with family in fun candid moment" },
 ]
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const heroRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -36,8 +37,9 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Carousel Background */}
+    <section ref={heroRef} className="relative min-h-screen flex items-end justify-center overflow-hidden">
+      <SnowEffect containerRef={heroRef} />
+
       <div className="absolute inset-0 z-0">
         {carouselImages.map((image, index) => (
           <div
@@ -56,7 +58,6 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Carousel Controls */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition-all"
@@ -72,7 +73,6 @@ export function Hero() {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Carousel Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {carouselImages.map((_, index) => (
           <button
@@ -84,23 +84,18 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <div className="relative z-10 container mx-auto px-4 text-center text-white pb-28 pl-4">
         <div className="inline-flex items-center gap-2 bg-[#FFD700] text-[#B71C1C] px-4 py-2 rounded-full mb-6 font-bold text-sm">
           <Sparkles className="w-4 h-4" />
-          <span>Two Generations of Christmas Magic</span>
+          <span>Santa for All Seasons</span>
         </div>
 
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance leading-tight">
-          Santa Ames <span className="text-[#FFD700]">with Dave</span>
+          Santaames
         </h1>
 
-        <p className="text-xl md:text-2xl lg:text-3xl mb-4 text-balance max-w-4xl mx-auto leading-relaxed">
-          Creating Memories for 56+ Years
-        </p>
-
         <p className="text-lg md:text-xl mb-8 text-balance max-w-3xl mx-auto opacity-90">
-          Vetted & Security Checked • Trusted by Ames Families Since 1969
+          Vetted &amp; Security Checked • Trusted by Ames Families Since 2004
         </p>
 
         <Button
@@ -108,12 +103,11 @@ export function Hero() {
           onClick={scrollToBooking}
           className="bg-[#B71C1C] hover:bg-[#8B0000] text-white text-lg px-8 py-6 rounded-full shadow-2xl border-2 border-[#FFD700] font-bold"
         >
-          Book Santa Dave
+          Book Santaames
         </Button>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background to-transparent z-10 h-24" />
     </section>
   )
 }

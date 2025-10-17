@@ -7,7 +7,7 @@ import { Gift, Building2, Users, Heart } from "lucide-react"
 const services = [
   {
     icon: Gift,
-    title: "Private Parties",
+    title: "Family Visits",
     description:
       "Make your family celebration unforgettable with a personal visit from Santa Dave. Perfect for home gatherings and intimate events.",
     color: "bg-[#B71C1C]",
@@ -21,7 +21,7 @@ const services = [
   },
   {
     icon: Users,
-    title: "Malls & Community Events",
+    title: "Community Events",
     description:
       "Trusted by the City of Ames and local businesses for public appearances, photo sessions, and community celebrations.",
     color: "bg-[#B71C1C]",
@@ -60,10 +60,10 @@ export function Services() {
               className="border-2 hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col"
             >
               <CardHeader>
-                <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-4`}>
+                <div className={`w-16 h-16 text-center flex-row ${service.color} rounded-full flex items-center justify-center mb-4`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="font-serif text-xl text-[#B71C1C]">{service.title}</CardTitle>
+                <CardTitle className="font-serif text-xl text-[#B71C1C] tracking-tighter">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
                 <CardDescription className="text-base leading-relaxed mb-4 flex-1">

@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-3xl font-bold mb-4 text-[#FFD700]">Santa Dave</h3>
+            <h3 className="font-serif text-3xl font-bold mb-4 text-[#FFD700]">Santa Ames </h3>
             <p className="text-white/90 leading-relaxed">
               The Original Santa of Ames, Iowa. Creating magical memories since 1969.
             </p>

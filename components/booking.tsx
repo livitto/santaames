@@ -39,21 +39,13 @@ export function Booking() {
     <section id="booking" className="py-20 bg-gradient-to-b from-[#FFF8F0] to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Book Santa Dave</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Book Santa Ames</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Reserve your holiday magic today</p>
         </div>
 
         <Card className="max-w-2xl mx-auto border-2 border-[#FFD700] shadow-2xl bg-white">
-          <CardHeader className="text-center bg-gradient-to-r from-[#B71C1C] to-[#8B0000] text-white rounded-t-lg">
-            <div className="w-16 h-16 mx-auto mb-4 bg-[#FFD700] rounded-full flex items-center justify-center">
-              <Sparkles className="w-8 h-8 text-[#B71C1C]" />
-            </div>
-            <CardTitle className="font-serif text-3xl">Reserve Your Holiday Magic</CardTitle>
-            <CardDescription className="text-white/90 text-base">
-              Fill out the form below and Santa Dave will get back to you shortly
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="pt-6">
+          
+          <CardContent className="p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="flex items-center gap-2">

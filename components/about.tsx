@@ -5,7 +5,7 @@ export function About() {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Meet Santa Dave</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Meet Santaames  </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A Santa with an authentic beard and a heart for community
           </p>
@@ -63,22 +63,22 @@ export function About() {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="/images/santa-with-child.jpg"
+                src="/images/design-mode/2.png"
                 alt="Santa Dave with child"
                 className="rounded-lg shadow-xl w-full h-64 object-cover"
               />
               <img
-                src="/images/santa-fireplace.jpg"
+                src="/images/design-mode/3.png"
                 alt="Santa Dave by fireplace"
                 className="rounded-lg shadow-xl w-full h-64 object-cover mt-8"
               />
               <img
-                src="/images/santa-with-baby.jpg"
+                src="/images/design-mode/4.png"
                 alt="Santa Dave with baby"
                 className="rounded-lg shadow-xl w-full h-64 object-cover -mt-8"
               />
               <img
-                src="/images/santa-and-mrs-claus.jpg"
+                src="/images/design-mode/1.png"
                 alt="Santa Dave and Mrs. Claus"
                 className="rounded-lg shadow-xl w-full h-64 object-cover"
               />
