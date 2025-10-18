@@ -39,11 +39,15 @@ export function WheresSanta() {
 
         <div className="max-w-5xl mx-auto">
           {/* Map Placeholder */}
-          <div className="mb-12 rounded-lg overflow-hidden shadow-xl border-4 border-[#FFD700]">
-            <img src="/map-of-ames-iowa-with-location-pins-christmas-them.jpg" alt="Map of Santa's locations" className="w-full h-96 object-cover" />
+          <div className="mb-12 rounded-lg overflow-hidden shadow-xl border-4 border-0">
+            <img
+              src="/images/santa-location-map.jpg"
+              alt="Santa in his sleigh at downtown Ames"
+              className="w-full h-96 object-cover"
+            />
           </div>
 
-          {/* Events List */}
+          {/* Events */}
           <div className="grid md:grid-cols-2 gap-6">
             {upcomingEvents.map((event, index) => (
               <Card key={index} className="border-2 hover:shadow-lg transition-shadow duration-300 bg-white">
