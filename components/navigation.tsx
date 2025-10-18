@@ -1,11 +1,14 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
+
+import { useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useMobileMenu } from "@/lib/mobile-menu-context"
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  const { isMenuOpen, setIsMenuOpen } = useMobileMenu()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -34,7 +37,7 @@ export function Navigation() {
       const element = document.getElementById(id)
       element?.scrollIntoView({ behavior: "smooth" })
     }
-    setIsOpen(false)
+    setIsMenuOpen(false)
   }
 
   return (
@@ -74,11 +77,11 @@ export function Navigation() {
 
           {/* Mobile Hamburger Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-white hover:text-[#FFD700] transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -86,7 +89,7 @@ export function Navigation() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         <div className="px-4 pt-2 pb-4 space-y-2 bg-[#8B0000] border-t border-white/20">
@@ -104,6 +107,15 @@ export function Navigation() {
             className="w-full bg-[#FFD700] hover:bg-[#FFC700] text-[#B71C1C] font-bold border-2 border-white mt-2"
           >
             Book Now
+          </Button>
+          <Button
+            onClick={() => {
+              window.open("https://wa.me/15155091059", "_blank")
+              setIsMenuOpen(false)
+            }}
+            className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold border-2 border-white"
+          >
+            Chat on WhatsApp
           </Button>
         </div>
       </div>

@@ -2,10 +2,13 @@
 
 import { useEffect, useState } from "react"
 import { Gift } from "lucide-react"
+import { useMobileMenu } from "@/lib/mobile-menu-context"
 
 export function ChristmasCountdown() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   const [isVisible, setIsVisible] = useState(true)
+  const [isBookingInView, setIsBookingInView] = useState(false)
+  const { isMenuOpen } = useMobileMenu()
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -56,10 +59,34 @@ export function ChristmasCountdown() {
     }
   }, [])
 
+  useEffect(() => {
+    const bookingSection = document.getElementById("booking")
+
+    if (!bookingSection) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsBookingInView(entry.isIntersecting)
+        })
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the booking section is visible
+        rootMargin: "-100px 0px 0px 0px", // Account for the fixed header
+      },
+    )
+
+    observer.observe(bookingSection)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
   return (
     <div
       className={`fixed top-20 right-4 z-[100] bg-[#B71C1C] text-white px-4 py-3 rounded-lg shadow-lg border-2 border-[#FFD700] transition-opacity duration-200 ${
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible && !isMenuOpen && !isBookingInView ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="flex items-center gap-2 mb-1">

@@ -56,7 +56,7 @@ export function Downloads() {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-[#FFD700] overflow-hidden"
+                className="group hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 hover:border-[#FFD700] overflow-hidden bg-white"
               >
                 <div
                   className={`h-32 bg-gradient-to-br ${item.color} flex items-center justify-center relative overflow-hidden`}
@@ -64,18 +64,18 @@ export function Downloads() {
                   <div className="absolute inset-0 bg-white/10 group-hover:bg-white/20 transition-colors" />
                   <Icon className="w-16 h-16 text-white relative z-10 group-hover:scale-110 transition-transform" />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                <CardContent className="p-6 bg-white">
+                  <h3 className="font-serif text-xl font-bold text-[#B71C1C] mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">{item.description}</p>
                   <Button
                     onClick={() => handleDownload(item.file, item.title)}
                     className="w-full bg-[#B71C1C] hover:bg-[#8B0000] text-white font-bold"
-                    disabled={true} // Disabled until files are uploaded
+                    disabled={true}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Coming Soon
                   </Button>
-                  <p className="text-xs text-gray-400 text-center mt-2">Files will be available soon</p>
+                  <p className="text-xs text-gray-500 text-center mt-2">Files will be available soon</p>
                 </CardContent>
               </Card>
             )

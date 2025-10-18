@@ -10,10 +10,11 @@ import { SocialMediaFeed } from "@/components/social-media-feed"
 import { Footer } from "@/components/footer"
 import { ChristmasCountdown } from "@/components/christmas-countdown"
 import { Navigation } from "@/components/navigation"
+import { MobileMenuProvider } from "@/lib/mobile-menu-context"
 
 export default function Home() {
   return (
-    <>
+    <MobileMenuProvider>
       <ChristmasCountdown />
       <Navigation />
       <main className="pt-16">
@@ -28,6 +29,6 @@ export default function Home() {
         <SocialMediaFeed />
       </main>
       <Footer />
-    </>
+    </MobileMenuProvider>
   )
 }
