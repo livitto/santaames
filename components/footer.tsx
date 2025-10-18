@@ -25,8 +25,7 @@ export function Footer() {
               Santa<span className="text-[#FFD700]">ames</span>
             </h3>
             <p className="text-white/90 leading-relaxed mb-6">
-              The Original Santa of Ames, Iowa. Creating magical Christmas memories for families, businesses, and
-              communities since 1969. Bringing joy and wonder to every celebration.
+              The Original Santa of Ames, Iowa. Creating magical Christmas memories for families, businesses, and communities since 2004. Bringing joy and wonder to every celebration.
             </p>
             <h5 className="font-semibold text-sm uppercase tracking-wide mb-3 text-amber-300">Follow us on</h5>
             <div className="flex gap-3">
