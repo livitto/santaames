@@ -85,16 +85,16 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center text-white pb-28 pl-4">
-        <div className="inline-flex items-center gap-2 bg-[#FFD700] text-[#B71C1C] px-4 py-2 rounded-full mb-6 font-bold text-sm">
+        <div className="inline-flex items-center gap-2 bg-[#FFD700] text-[#B71C1C] px-4 py-2 rounded-full font-bold text-sm mb-0">
           <Sparkles className="w-4 h-4" />
           <span>Santa for All Seasons</span>
         </div>
 
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance leading-tight">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-balance leading-tight mb-1">
           Santaames
         </h1>
 
-        <p className="text-lg md:text-xl mb-8 text-balance max-w-3xl mx-auto opacity-90">
+        <p className="text-lg md:text-xl text-balance max-w-3xl mx-auto opacity-90 text-yellow-300 mb-8">
           Vetted &amp; Security Checked • Trusted by Ames Families Since 2004
         </p>
 
