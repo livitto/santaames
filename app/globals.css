@@ -143,6 +143,20 @@
   animation: scroll 30s linear infinite;
 }
 
+/* Added slower animation for better visibility of all 20 logos */
+@keyframes scroll-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-slow {
+  animation: scroll-slow 80s linear infinite;
+}
+
 /* Add snowflake animation styles */
 @keyframes fall {
   0% {
