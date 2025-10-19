@@ -109,15 +109,6 @@ export function Navigation() {
           >
             Book Now
           </Button>
-          <Button
-            onClick={() => {
-              window.open("https://wa.me/15155091059", "_blank")
-              setIsMenuOpen(false)
-            }}
-            className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold border-2 border-white"
-          >
-            Chat on WhatsApp
-          </Button>
         </div>
       </div>
     </nav>

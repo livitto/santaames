@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Mail, Facebook, Instagram, MessageCircle, Heart } from "lucide-react"
+import { Phone, Mail, Facebook, Instagram, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Footer() {
@@ -9,10 +9,6 @@ export function Footer() {
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: "smooth" })
     }
-  }
-
-  const openWhatsApp = () => {
-    window.open("https://wa.me/15155091059", "_blank")
   }
 
   return (
@@ -25,7 +21,8 @@ export function Footer() {
               Santa<span className="text-[#FFD700]">ames</span>
             </h3>
             <p className="text-white/90 leading-relaxed mb-6">
-              The Original Santa of Ames, Iowa. Creating magical Christmas memories for families, businesses, and communities since 2004. Bringing joy and wonder to every celebration.
+              The Original Santa of Ames, Iowa. Creating magical Christmas memories for families, businesses, and
+              communities since 2004. Bringing joy and wonder to every celebration.
             </p>
             <h5 className="font-semibold text-sm uppercase tracking-wide mb-3 text-amber-300">Follow us on</h5>
             <div className="flex gap-3">
@@ -86,21 +83,12 @@ export function Footer() {
                 <span>santaames@yahoo.com</span>
               </a>
             </div>
-            <div className="space-y-3">
-              <Button
-                className="w-full bg-[#FFD700] text-[#B71C1C] hover:bg-[#FFC700] font-bold py-5"
-                onClick={scrollToBooking}
-              >
-                Book Now
-              </Button>
-              <Button
-                className="w-full bg-[#25D366] text-white hover:bg-[#20BA5A] font-bold py-5"
-                onClick={openWhatsApp}
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Chat on WhatsApp
-              </Button>
-            </div>
+            <Button
+              className="w-full bg-[#FFD700] text-[#B71C1C] hover:bg-[#FFC700] font-bold py-5"
+              onClick={scrollToBooking}
+            >
+              Book Now
+            </Button>
           </div>
         </div>
 
