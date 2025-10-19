@@ -22,6 +22,7 @@ export function Navigation() {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Gallery", href: "#gallery" },
     { name: "Services", href: "#services" },
     { name: "Events", href: "#events" },
     { name: "Booking", href: "#booking" },
@@ -57,7 +58,7 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
                 key={link.name}
@@ -78,7 +79,7 @@ export function Navigation() {
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-white hover:text-[#FFD700] transition-colors"
+            className="lg:hidden p-2 text-white hover:text-[#FFD700] transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,7 +89,7 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out ${
+        className={`lg:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >

@@ -3,28 +3,16 @@ import { MapPin, Calendar, Clock } from "lucide-react"
 
 const upcomingEvents = [
   {
-    location: "North Grand Mall",
-    address: "2801 Grand Ave, Ames, IA",
-    date: "December 15-24",
-    time: "10:00 AM - 8:00 PM",
+    location: "Coming Soon",
+    address: "Location TBA",
+    date: "Date TBA",
+    time: "Time TBA",
   },
   {
-    location: "Aqua Center Water Park",
-    address: "5600 Green Hills Dr, Ames, IA",
-    date: "December 16",
-    time: "2:00 PM - 5:00 PM",
-  },
-  {
-    location: "Boone Scenic Valley Railroad",
-    address: "225 10th St, Boone, IA",
-    date: "December 17-18",
-    time: "1:00 PM - 6:00 PM",
-  },
-  {
-    location: "Downtown Ames Main Street",
-    address: "Main Street, Ames, IA",
-    date: "December 20",
-    time: "4:00 PM - 7:00 PM",
+    location: "Coming Soon",
+    address: "Location TBA",
+    date: "Date TBA",
+    time: "Time TBA",
   },
 ]
 

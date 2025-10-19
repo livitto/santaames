@@ -37,7 +37,7 @@ export function Downloads() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-red-50">
+    <section id="downloads" className="py-20 bg-gradient-to-b from-white to-red-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-[#B71C1C] text-white px-4 py-2 rounded-full mb-4 font-bold text-sm">

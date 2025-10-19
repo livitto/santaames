@@ -91,7 +91,12 @@ export function EventsGallery() {
 
         {/* Testimonials */}
         <div className="max-w-6xl mx-auto">
-          <h3 className="font-serif text-3xl font-bold text-center text-[#1B5E20] mb-8">What Families Say</h3>
+          <div className="text-center mb-12 mt-0 py-4">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">What My Clients Say</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real experiences from families and organizations who've shared the magic
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-white border-2 border-[#FFD700]">

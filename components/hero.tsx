@@ -37,7 +37,7 @@ export function Hero() {
   }
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-end justify-center overflow-hidden">
+    <section id="home" ref={heroRef} className="relative min-h-screen flex items-end justify-center overflow-hidden">
       <SnowEffect containerRef={heroRef} />
 
       <div className="absolute inset-0 z-0">

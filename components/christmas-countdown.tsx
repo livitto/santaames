@@ -6,17 +6,15 @@ import { useMobileMenu } from "@/lib/mobile-menu-context"
 
 export function ChristmasCountdown() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-  const [isVisible, setIsVisible] = useState(true)
-  const [isBookingInView, setIsBookingInView] = useState(false)
+  const [isHeroInView, setIsHeroInView] = useState(true)
   const { isMenuOpen } = useMobileMenu()
 
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date()
       const currentYear = now.getFullYear()
-      const christmas = new Date(currentYear, 11, 25) // December 25
+      const christmas = new Date(currentYear, 11, 25)
 
-      // If Christmas has passed this year, calculate for next year
       if (now > christmas) {
         christmas.setFullYear(currentYear + 1)
       }
@@ -40,43 +38,23 @@ export function ChristmasCountdown() {
   }, [])
 
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout
+    const heroSection = document.querySelector("section")
 
-    const handleScroll = () => {
-      setIsVisible(false)
-
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {
-        setIsVisible(true)
-      }, 150)
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      clearTimeout(scrollTimeout)
-    }
-  }, [])
-
-  useEffect(() => {
-    const bookingSection = document.getElementById("booking")
-
-    if (!bookingSection) return
+    if (!heroSection) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setIsBookingInView(entry.isIntersecting)
+          setIsHeroInView(entry.isIntersecting)
         })
       },
       {
-        threshold: 0.1, // Trigger when 10% of the booking section is visible
-        rootMargin: "-100px 0px 0px 0px", // Account for the fixed header
+        threshold: 0.3, // Show when 30% of hero is visible
+        rootMargin: "0px",
       },
     )
 
-    observer.observe(bookingSection)
+    observer.observe(heroSection)
 
     return () => {
       observer.disconnect()
@@ -86,7 +64,7 @@ export function ChristmasCountdown() {
   return (
     <div
       className={`fixed top-20 right-4 z-[100] bg-[#B71C1C] text-white px-4 py-3 rounded-lg shadow-lg border-2 border-[#FFD700] transition-opacity duration-200 ${
-        isVisible && !isMenuOpen && !isBookingInView ? "opacity-100" : "opacity-0"
+        isHeroInView && !isMenuOpen ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="flex items-center gap-2 mb-1">
