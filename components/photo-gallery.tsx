@@ -6,52 +6,80 @@ import { Button } from "@/components/ui/button"
 
 const galleryPhotos = [
   {
-    image: "/images/hero-1.jpg",
-    caption: "Santa Dave bringing holiday magic to downtown Ames with his majestic sleigh and reindeer",
+    image: "/images/gallery-2.jpg",
+    caption: "Special one-on-one time with each child, making every visit personal and memorable",
   },
   {
-    image: "/images/hero-2.jpg",
-    caption: "Creating precious memories with children, one snowball fight at a time",
+    image: "/images/gallery-3.jpg",
+    caption: "Santa Dave in his finest traditional suit, ready to bring Christmas magic to your event",
   },
   {
-    image: "/images/hero-3.jpg",
-    caption: "Warm moments with families in the comfort of their homes during the holiday season",
+    image: "/images/gallery-4.jpg",
+    caption: "Bringing festive cheer to community events and spreading holiday joy throughout Ames",
   },
   {
-    image: "/images/hero-4.jpg",
-    caption: "Ready to welcome children with open arms and a heart full of Christmas spirit",
+    image: "/images/gallery-5.jpg",
+    caption: "Tender moments with the youngest visitors - even newborns get to meet Santa",
   },
   {
-    image: "/images/hero-5.jpg",
-    caption: "Sharing laughter and joy with families - the true essence of Christmas",
+    image: "/images/gallery-6.jpg",
+    caption: "Outdoor holiday celebrations with illuminated displays and festive decorations",
   },
   {
-    image: "/santa-at-corporate-event.jpg",
-    caption: "Bringing festive cheer to corporate events and making every celebration memorable",
+    image: "/images/gallery-7.jpg",
+    caption: "Professional Santa appearances with authentic costume and traditional sleigh bells",
   },
   {
-    image: "/santa-with-children-at-school.jpg",
-    caption: "Visiting schools and spreading the magic of Christmas to young hearts",
+    image: "/images/gallery-8.jpg",
+    caption: "Magical Christmas moments captured - holding the light of the season",
   },
   {
-    image: "/santa-at-nursing-home.jpg",
-    caption: "Brightening the holidays for seniors at nursing homes with stories and smiles",
+    image: "/images/gallery-santa-boy-globe.jpg",
+    caption: "Sharing the magic of Christmas with wonder-filled moments and enchanted ornaments",
   },
   {
-    image: "/santa-reading-letters.jpg",
-    caption: "Every child's wish is heard - reading letters and making dreams come true",
+    image: "/images/gallery-santa-twins.jpg",
+    caption: "Double the joy - creating precious memories with the littlest visitors",
   },
   {
-    image: "/santa-with-pets.jpg",
-    caption: "Even our furry friends get to meet Santa and share in the holiday joy",
+    image: "/images/gallery-santa-list.jpg",
+    caption: "Carefully reviewing the nice list in Santa's cozy workshop setting",
   },
   {
-    image: "/santa-at-community-event.jpg",
-    caption: "A proud member of the Ames community, celebrating together year after year",
+    image: "/images/gallery-santa-winter-wonderland.jpg",
+    caption: "Santa Dave in his elegant winter wonderland setting, bringing timeless Christmas charm",
   },
   {
-    image: "/santa-waving-goodbye.jpg",
-    caption: "Until next year - keeping the spirit of Christmas alive in every heart",
+    image: "/images/gallery-santa-boy-conversation.jpg",
+    caption: "Heart-to-heart conversations about Christmas wishes and holiday dreams",
+  },
+  {
+    image: "/images/gallery-santa-baby.jpg",
+    caption: "Gentle moments with infants - creating first Christmas memories that last forever",
+  },
+  {
+    image: "/images/gallery-santa-portrait.jpg",
+    caption: "Classic Santa portrait showcasing the authentic traditional look and warm personality",
+  },
+  {
+    image: "/images/gallery-santa-darth-vader.jpg",
+    caption: "Fun and memorable moments - Santa brings joy to fans of all ages and interests",
+  },
+  {
+    image: "/images/gallery-santa-thumbs-up.jpg",
+    caption: "Ready to make your holiday event spectacular with professional Santa services",
+  },
+  {
+    image: "/images/gallery-santa-storytime.jpg",
+    caption: "Captivating young audiences with Christmas stories and creating group memories",
+  },
+  {
+    image: "/images/gallery-santa-family-pajamas.jpg",
+    caption: "Warm family moments in Santa's cozy workshop - creating cherished memories together",
+  },
+  {
+    image: "/images/gallery-10.jpg",
+    caption: "Working with Santa's helpers to create unforgettable holiday experiences",
   },
 ]
 
@@ -153,7 +181,7 @@ export function PhotoGallery() {
               <img
                 src={galleryPhotos[currentIndex].image || "/placeholder.svg"}
                 alt={galleryPhotos[currentIndex].caption}
-                className="w-full h-full object-cover transition-opacity duration-500"
+                className="w-full h-full object-cover object-[center_20%] transition-opacity duration-500"
               />
 
               {/* Navigation Arrows */}

@@ -3,38 +3,34 @@ import { Star } from "lucide-react"
 
 const events = [
   {
-    image: "/images/walmart-vision.jpg",
-    title: "Walmart Vision",
-    location: "Ames, IA",
+    image: "/images/event-children-sleigh.jpg",
+    title: "",
+    location: "",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2023%20Child%20serve%203-kDb1hUIIUmp7whqBCbqruq5CmttWU1.jpg",
-    title: "Ames School District",
-    location: "Ames, IA",
+    image: "/images/event-santa-bulldog.jpg",
+    title: "",
+    location: "",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2024%20Boone%20Rail%201-29EmffhlnhLwOyRGDkDorZ5hCbewWx.jpg",
-    title: "Boone Scenic Valley Railroad",
-    location: "Boone, IA",
+    image: "/images/event-santa-children-pajamas.jpg",
+    title: "",
+    location: "",
   },
   {
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2023%20Homewood-EyL7H7u6o1D4y0wL3InB7N68PEYiye.jpg",
-    title: "Downtown Ames",
-    location: "Main Street",
+    image: "/images/event-santa-batman.jpg",
+    title: "",
+    location: "",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2021%20Accura%201-Q40q6t3tCK8bTMnwDzJoftQXXCzWnF.jpg",
-    title: "Accura Healthcare",
-    location: "Community Visit",
+    image: "/images/event-santa-car.jpg",
+    title: "",
+    location: "",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2021%20Gingerbread%202-1RfCa7xM9t1mRxk0rF1kNP5b0Ymlsw.jpg",
-    title: "ChildServe",
-    location: "Special Event",
+    image: "/images/event-santa-young-children.jpg",
+    title: "",
+    location: "",
   },
 ]
 
@@ -77,14 +73,9 @@ export function EventsGallery() {
             >
               <img
                 src={event.image || "/placeholder.svg"}
-                alt={event.title}
+                alt={`Santa Dave event ${index + 1}`}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h3 className="font-serif text-xl font-bold mb-1">{event.title}</h3>
-                <p className="text-sm opacity-90">{event.location}</p>
-              </div>
             </div>
           ))}
         </div>
