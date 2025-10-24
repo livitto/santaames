@@ -21,7 +21,8 @@ export function Footer() {
               Santa<span className="text-[#FFD700]">ames</span>
             </h3>
             <p className="text-white/90 leading-relaxed mb-6">
-              The Original Santa of Ames, Iowa. Creating magical Christmas memories for families, businesses, and communities since 2004. 
+              The Original Santa of Ames, Iowa. Creating magical Christmas memories for families, businesses, and
+              communities since 2004.
             </p>
             <h5 className="font-semibold text-sm uppercase tracking-wide mb-3 text-amber-300">Follow us on</h5>
             <div className="flex gap-3">
@@ -64,7 +65,7 @@ export function Footer() {
           <div></div>
 
           {/* Column 3: Contact Info and Buttons (30%) */}
-          <div className="px-0 py-0">
+          <div className="md:px-0 py-0 px-1.5">
             <h4 className="font-serif text-2xl font-bold mb-6 text-amber-300">Contact</h4>
             <div className="space-y-4 mb-6">
               <a
@@ -83,7 +84,7 @@ export function Footer() {
               </a>
             </div>
             <Button
-              className="w-full bg-[#FFD700] text-[#B71C1C] hover:bg-[#FFC700] font-bold py-6 text-xl"
+              className="bg-[#FFD700] text-[#B71C1C] hover:bg-[#FFC700] font-bold py-4 text-lg h-auto mx-0 my-0 px-0 w-64 md:text-2xl md:py-3"
               onClick={scrollToBooking}
             >
               Book Now
