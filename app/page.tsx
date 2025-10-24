@@ -12,6 +12,7 @@ import { Footer } from "@/components/footer"
 import { ChristmasCountdown } from "@/components/christmas-countdown"
 import { Navigation } from "@/components/navigation"
 import { MobileMenuProvider } from "@/lib/mobile-menu-context"
+import { FloatingBookButton } from "@/components/floating-book-button"
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <SocialMediaFeed />
       </main>
       <Footer />
+      <FloatingBookButton />
     </MobileMenuProvider>
   )
 }

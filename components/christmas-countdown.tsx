@@ -63,33 +63,33 @@ export function ChristmasCountdown() {
 
   return (
     <div
-      className={`fixed top-20 right-4 z-[100] bg-[#B71C1C] text-white px-4 py-3 rounded-lg shadow-lg border-2 border-[#FFD700] transition-opacity duration-200 ${
+      className={`fixed top-20 right-2 md:right-4 z-[100] bg-[#B71C1C] text-white px-2 py-2 md:px-4 md:py-3 rounded-lg shadow-lg border-2 border-[#FFD700] transition-opacity duration-200 ${
         isHeroInView && !isMenuOpen ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex items-center gap-2 mb-1">
-        <Gift className="w-4 h-4" />
-        <span className="text-xs font-bold uppercase tracking-wide">Christmas Countdown</span>
+      <div className="flex items-center gap-1 md:gap-2 mb-1">
+        <Gift className="w-3 h-3 md:w-4 md:h-4" />
+        <span className="text-[10px] md:text-xs font-bold uppercase tracking-wide">Christmas Countdown</span>
       </div>
-      <div className="flex gap-2 text-center">
+      <div className="flex gap-1 md:gap-2 text-center">
         <div className="flex flex-col">
-          <span className="text-xl font-bold font-serif">{timeLeft.days}</span>
-          <span className="text-[10px] uppercase">Days</span>
+          <span className="text-base md:text-xl font-bold font-serif">{timeLeft.days}</span>
+          <span className="text-[9px] md:text-[10px] uppercase">Days</span>
         </div>
-        <span className="text-xl font-bold">:</span>
+        <span className="text-base md:text-xl font-bold">:</span>
         <div className="flex flex-col">
-          <span className="text-xl font-bold font-serif">{timeLeft.hours}</span>
-          <span className="text-[10px] uppercase">Hrs</span>
+          <span className="text-base md:text-xl font-bold font-serif">{timeLeft.hours}</span>
+          <span className="text-[9px] md:text-[10px] uppercase">Hrs</span>
         </div>
-        <span className="text-xl font-bold">:</span>
+        <span className="text-base md:text-xl font-bold">:</span>
         <div className="flex flex-col">
-          <span className="text-xl font-bold font-serif">{timeLeft.minutes}</span>
-          <span className="text-[10px] uppercase">Min</span>
+          <span className="text-base md:text-xl font-bold font-serif">{timeLeft.minutes}</span>
+          <span className="text-[9px] md:text-[10px] uppercase">Min</span>
         </div>
-        <span className="text-xl font-bold">:</span>
+        <span className="text-base md:text-xl font-bold">:</span>
         <div className="flex flex-col">
-          <span className="text-xl font-bold font-serif">{timeLeft.seconds}</span>
-          <span className="text-[10px] uppercase">Sec</span>
+          <span className="text-base md:text-xl font-bold font-serif">{timeLeft.seconds}</span>
+          <span className="text-[9px] md:text-[10px] uppercase">Sec</span>
         </div>
       </div>
     </div>
