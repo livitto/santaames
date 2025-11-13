@@ -54,13 +54,11 @@ export function SocialMediaFeed() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-red-50">
+    <section className="py-20 bg-gradient-to-b from-[#FFFAF7] to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Follow Santaames</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Stay connected with me! 
-          </p>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Stay connected with me!</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -128,7 +126,6 @@ export function SocialMediaFeed() {
         </div>
 
         {/* Admin note - remove this in production */}
-        
       </div>
     </section>
   )

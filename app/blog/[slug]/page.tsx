@@ -24,6 +24,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     notFound()
   }
 
+  const getShareUrl = () => {
+    return typeof window !== "undefined" ? window.location.href : ""
+  }
+
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getShareUrl())}`
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(getShareUrl())}&text=${encodeURIComponent(`Check out this story: ${post.title} - Santaames`)}`
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -66,12 +73,22 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 <p className="text-gray-600">Spread the Christmas magic with your friends and family</p>
               </div>
               <div className="flex gap-3">
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                <a
+                  href={facebookShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                >
                   Facebook
-                </button>
-                <button className="px-4 py-2 bg-sky-400 text-white rounded-lg hover:bg-sky-500 transition-colors font-medium">
-                  Twitter
-                </button>
+                </a>
+                <a
+                  href={twitterShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-sky-400 text-white rounded-lg hover:bg-sky-500 transition-colors font-medium"
+                >
+                  Twitter / X
+                </a>
               </div>
             </div>
           </div>

@@ -57,7 +57,7 @@ const testimonials = [
 
 export function EventsGallery() {
   return (
-    <section id="events" className="py-20 bg-[#FFF8F0]">
+    <section id="events" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Events & Memories</h2>

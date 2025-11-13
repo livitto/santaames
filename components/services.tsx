@@ -44,7 +44,7 @@ const scrollToBooking = () => {
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-background to-[#FFF8F0]">
+    <section id="services" className="py-20 bg-gradient-to-b from-white to-[#FFFAF7]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Santa Services</h2>
@@ -60,7 +60,9 @@ export function Services() {
               className="border-2 hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col"
             >
               <CardHeader>
-                <div className={`w-16 h-16 text-center flex-row ${service.color} rounded-full flex items-center justify-center mb-4`}>
+                <div
+                  className={`w-16 h-16 text-center flex-row ${service.color} rounded-full flex items-center justify-center mb-4`}
+                >
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="font-serif text-xl text-[#B71C1C] tracking-tighter">{service.title}</CardTitle>

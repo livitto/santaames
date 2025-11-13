@@ -18,7 +18,7 @@ My very first event was a walk around at K-Mart. My wife dropped me off back fro
 
 A warm feeling came over me, like something I never felt before. I said to myself, I want to do this the rest of my life. And as they say in movies, the rest is history.`,
     date: "December 15, 2024",
-    image: "/santa-beginnings-first-moment-with-child.jpg",
+    image: "/the-beginnings.jpg",
   },
   {
     id: "funny-stories",
@@ -33,6 +33,6 @@ I said a real one? YES. Oh my, that's not possible since to have a real magic wa
 
 A couple of years later, I had 2 young boys about 4 and 6 come visit. The younger boy said he wanted a magic wand for Christmas. It was all I could do to not laugh. I asked why he wanted a magic wand. He said that he wanted to make his brother small since his snoring kept him awake.`,
     date: "December 10, 2024",
-    image: "/santa-funny-stories-children-laughing.jpg",
+    image: "/funny-stories-from-the-years.jpg",
   },
 ]

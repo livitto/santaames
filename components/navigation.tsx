@@ -32,6 +32,11 @@ export function Navigation() {
 
   const scrollToSection = (href: string) => {
     const id = href.replace("#", "")
+    if (typeof window !== "undefined" && window.location.pathname.includes("/blog/")) {
+      window.location.href = `/${href}`
+      return
+    }
+
     if (id === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" })
     } else {

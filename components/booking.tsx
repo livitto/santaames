@@ -64,7 +64,7 @@ export function Booking() {
   }
 
   return (
-    <section id="booking" className="py-20 bg-gradient-to-b from-[#FFF8F0] to-background">
+    <section id="booking" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-[#B71C1C] text-white px-4 py-2 rounded-full mb-4 font-bold text-sm shadow-lg">

@@ -164,7 +164,7 @@ export function PhotoGallery() {
   }, [])
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-background to-[#FFF8F0]">
+    <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Moments of Magic</h2>
