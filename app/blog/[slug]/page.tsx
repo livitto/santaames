@@ -1,13 +1,23 @@
-"use client"
-
 import { blogPosts } from "@/lib/blog-data"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { useRouter } from "next/navigation"
 import { notFound } from "next/navigation"
 
+export const generateStaticParams = async () => {
+  return blogPosts.map((post) => ({
+    slug: post.id,
+  }))
+}
+
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const post = blogPosts.find((p) => p.id === params.slug)
+  return {
+    title: post?.title || "Blog Post",
+    description: post?.excerpt || "Read our latest story",
+  }
+}
+
 export default function BlogPost({ params }: { params: { slug: string } }) {
-  const router = useRouter()
   const post = blogPosts.find((p) => p.id === params.slug)
 
   if (!post) {
