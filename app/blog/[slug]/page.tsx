@@ -1,34 +1,24 @@
+"use client"
+
 import { blogPosts } from "@/lib/blog-data"
 import { BlogHeader } from "@/components/blog-header"
 import { BlogFooter } from "@/components/blog-footer"
+import { useRouter } from "next/navigation"
 import { notFound } from "next/navigation"
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = blogPosts.find((p) => p.id === slug)
-
-  if (!post) {
-    return { title: "Post Not Found" }
-  }
-
-  return {
-    title: `${post.title} | Santa Dave Stories`,
-    description: post.excerpt,
-  }
-}
-
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.id,
-  }))
-}
-
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = blogPosts.find((p) => p.id === slug)
+export default function BlogPost({ params }: { params: { slug: string } }) {
+  const router = useRouter()
+  const post = blogPosts.find((p) => p.id === params.slug)
 
   if (!post) {
     notFound()
+  }
+
+  const handleBookingClick = () => {
+    if (window.opener) {
+      window.opener.location.hash = "#booking"
+      window.close()
+    }
   }
 
   return (
@@ -85,7 +75,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </article>
       </main>
 
-      <BlogFooter onBookingClick={() => window.close()} />
+      <BlogFooter onBookingClick={handleBookingClick} />
     </div>
   )
 }
