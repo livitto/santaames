@@ -1,8 +1,8 @@
 "use client"
 
 import { blogPosts } from "@/lib/blog-data"
-import { BlogHeader } from "@/components/blog-header"
-import { BlogFooter } from "@/components/blog-footer"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 import { useRouter } from "next/navigation"
 import { notFound } from "next/navigation"
 
@@ -14,18 +14,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     notFound()
   }
 
-  const handleBookingClick = () => {
-    if (window.opener) {
-      window.opener.location.hash = "#booking"
-      window.close()
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <BlogHeader />
+      <Navigation />
 
-      <main className="container mx-auto px-4 py-12 md:py-16">
+      <main className="container mx-auto px-4 py-12 md:py-16 mt-16">
         {/* Article Header */}
         <article className="max-w-3xl mx-auto">
           {/* Hero Image */}
@@ -40,8 +33,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <div className="flex items-center gap-3 text-gray-600">
               <div className="w-12 h-12 rounded-full bg-[#B71C1C] flex items-center justify-center text-2xl">🎅</div>
               <div>
-                <p className="font-medium">Santa Dave</p>
-                <p className="text-sm">Spreading Christmas Magic</p>
+                <p className="font-medium">Santaames</p>
+                <p className="text-sm">Spreading Christmas Magic in Ames, Iowa</p>
               </div>
             </div>
           </div>
@@ -75,7 +68,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </article>
       </main>
 
-      <BlogFooter onBookingClick={handleBookingClick} />
+      <Footer />
     </div>
   )
 }
