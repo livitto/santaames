@@ -18,7 +18,7 @@ const upcomingEvents = [
 
 export function WheresSanta() {
   return (
-    <section id="wheres-santa" className="py-20 bg-background">
+    <section id="wheres-santa" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">{`Where's Santa?`}</h2>
