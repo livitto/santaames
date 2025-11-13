@@ -8,8 +8,9 @@ export function BlogHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleScroll = (sectionId: string) => {
-    const baseUrl = typeof window !== "undefined" ? window.location.origin : ""
-    window.opener?.location.hash = sectionId
+    if (window.opener) {
+      window.opener.location.hash = sectionId
+    }
     setIsMenuOpen(false)
   }
 
@@ -25,7 +26,11 @@ export function BlogHeader() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           <button
-            onClick={() => window.opener?.location.reload()}
+            onClick={() => {
+              if (window.opener) {
+                window.opener.location.reload()
+              }
+            }}
             className="text-gray-700 hover:text-[#B71C1C] font-medium transition-colors"
           >
             Home
@@ -51,7 +56,11 @@ export function BlogHeader() {
           <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
               <button
-                onClick={() => window.opener?.location.reload()}
+                onClick={() => {
+                  if (window.opener) {
+                    window.opener.location.reload()
+                  }
+                }}
                 className="text-left text-gray-700 hover:text-[#B71C1C] font-medium transition-colors py-2"
               >
                 Home
