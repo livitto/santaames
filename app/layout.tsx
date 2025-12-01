@@ -17,25 +17,33 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: "Santa Dave - The Original Santa of Ames, Iowa",
+  title: "Santaames - The Original Santa of Ames, Iowa",
   description:
-    "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 1969.",
+    "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
   generator: "v0.app",
+  metadataBase: new URL("https://santaames.vercel.app"),
   openGraph: {
-    title: "Santa Dave - The Original Santa of Ames, Iowa",
+    title: "Santaames - The Original Santa of Ames, Iowa",
     description:
-      "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 1969.",
+      "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
     type: "website",
-    url: "https://santaames.com",
+    url: "https://santaames.vercel.app",
     siteName: "Santaames",
     images: [
       {
-        url: "https://santaames.com/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Santa Dave - The Original Santa of Ames, Iowa",
+        alt: "Santaames - The Original Santa of Ames, Iowa",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Santaames - The Original Santa of Ames, Iowa",
+    description:
+      "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
+    images: ["/og-image.jpg"],
   },
 }
 
