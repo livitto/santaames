@@ -21,6 +21,22 @@ export const metadata: Metadata = {
   description:
     "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 1969.",
   generator: "v0.app",
+  openGraph: {
+    title: "Santa Dave - The Original Santa of Ames, Iowa",
+    description:
+      "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 1969.",
+    type: "website",
+    url: "https://santaames.com",
+    siteName: "Santaames",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Santa Dave - The Original Santa of Ames, Iowa",
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
