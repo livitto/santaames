@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Santaames",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://santaames.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Santa Dave - The Original Santa of Ames, Iowa",
