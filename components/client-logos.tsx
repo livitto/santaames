@@ -2,7 +2,6 @@
 
 export function ClientLogos() {
   const clients = [
-    { name: "Blank Park Zoo", logo: "/logos/blank-park-zoo.png" },
     { name: "GiGi's Playhouse", logo: "/logos/gigi-playhouse.webp" },
     { name: "Bethany Life", logo: "/logos/bethany-life.webp" },
     { name: "Ames Golf & Country Club", logo: "/logos/ames-golf.webp" },
