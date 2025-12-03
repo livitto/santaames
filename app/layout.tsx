@@ -21,17 +21,17 @@ export const metadata: Metadata = {
   description:
     "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
   generator: "v0.app",
-  metadataBase: new URL("https://santaames.vercel.app"),
+  metadataBase: new URL("https://www.santaames.com"),
   openGraph: {
     title: "Santaames - The Original Santa of Ames, Iowa",
     description:
       "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
     type: "website",
-    url: "https://santaames.vercel.app",
+    url: "https://www.santaames.com",
     siteName: "Santaames",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://www.santaames.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Santaames - The Original Santa of Ames, Iowa",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Santaames - The Original Santa of Ames, Iowa",
     description:
       "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
-    images: ["/og-image.jpg"],
+    images: ["https://www.santaames.com/og-image.png"],
   },
 }
 
