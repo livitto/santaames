@@ -43,7 +43,9 @@ export const metadata: Metadata = {
     title: "Santaames - The Original Santa of Ames, Iowa",
     description:
       "Santa with the Original Beard – Creating Memories for 56+ Years. Trusted by families, schools, and the City of Ames since 2004.",
-    images: ["https://www.santaames.com/og-image.png"],
+    images: ["https://www.santaames.com/og-image.png?v=2"],
+    creator: "@santaames",
+    site: "@santaames",
   },
 }
 

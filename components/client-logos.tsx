@@ -12,6 +12,7 @@ export function ClientLogos() {
     { name: "Rose Farm", logo: "/logos/rose-farm.png" },
     { name: "A Child's World", logo: "/logos/childs-world.webp" },
     { name: "Coca-Cola", logo: "/logos/coca-cola.png" },
+    { name: "Blank Park Zoo", logo: "/logos/blank-park-zoo.png" }, // Added Blank Park Zoo logo back to the list
     { name: "Oakridge Real Estate", logo: "/logos/oakridge.webp" },
     { name: "Iowa Terrace Hill", logo: "/logos/iowa-terrace-hill.png" },
     { name: "Hy-Vee", logo: "/logos/hyvee.png" }, // Updated to new PNG logo
