@@ -58,7 +58,7 @@ export default function EventPageClient({ event, slug }: { event: EventDetails |
                 className="w-full h-64 md:h-96 object-cover"
               />
               {event.isFree && (
-                <div className="absolute top-4 left-4 bg-[#1B5E20] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                <div className="absolute top-4 left-4 bg-[#FFD700] text-[#B71C1C] px-4 py-2 rounded-full text-sm font-bold shadow-lg border border-[#B71C1C]/20">
                   FREE EVENT
                 </div>
               )}

@@ -22,7 +22,7 @@ const events: Record<
     address: "207 Main St, Ames, Iowa",
     date: "December 8, 2025",
     time: "5:00 – 6:30 PM",
-    description: "Bring non-perishable donation",
+    description: "Free; Bring non-perishable donation",
     fullDescription: `Photos with Santa at Marmalade Moon!
 
 Come join me for a little Christmas magic!
