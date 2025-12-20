@@ -15,6 +15,7 @@ import { Navigation } from "@/components/navigation"
 import { MobileMenuProvider } from "@/lib/mobile-menu-context"
 import { FloatingBookButton } from "@/components/floating-book-button"
 import { BlogCarousel } from "@/components/blog-carousel"
+import { MagicVideoMessage } from "@/components/magic-video-message"
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Services />
         <EventsGallery />
         <Downloads />
+        <MagicVideoMessage />
         <Booking />
         <GettingReady />
         <WheresSanta />

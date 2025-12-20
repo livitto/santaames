@@ -20,11 +20,11 @@ export function Navigation() {
   }, [])
 
   const navLinks = [
-    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Gallery", href: "#gallery" },
     { name: "Services", href: "#services" },
     { name: "Events", href: "#events" },
+    { name: "Magic Video", href: "#magic-video" },
     { name: "Booking", href: "#booking" },
     { name: "Downloads", href: "#downloads" },
     { name: "Contact", href: "#contact" },

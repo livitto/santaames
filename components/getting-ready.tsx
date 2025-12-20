@@ -23,7 +23,7 @@ export function GettingReady() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#F5E6D3] via-[#FFF8F0] to-[#F9F3ED]">
+    <section id="getting-ready" className="py-20 bg-gradient-to-b from-[#F5E6D3] via-[#FFF8F0] to-[#F9F3ED]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="mb-6 h-1 w-20 bg-gradient-to-r from-[#B71C1C] to-[#FFD700] mx-auto rounded-full"></div>
