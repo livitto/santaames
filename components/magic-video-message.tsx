@@ -116,7 +116,7 @@ export function MagicVideoMessage() {
             <Sparkles className="w-4 h-4" />
             <span>FREE Service - Limited Spots!</span>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Santa's Magic Video Message</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#B71C1C] mb-4">Santa&apos;s Magic Video Messege  </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Get a personalized 30-second video message from Santa for your child - absolutely FREE! Delivered before
             Christmas.

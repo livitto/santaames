@@ -43,11 +43,13 @@ export function FloatingBookButton() {
 
     const heroSection = document.getElementById("home")
     const bookingSection = document.getElementById("booking")
+    const magicVideoSection = document.getElementById("magic-video")
     const downloadsSection = document.getElementById("downloads")
     const footerSection = document.getElementById("contact")
 
     if (heroSection) observer.observe(heroSection)
     if (bookingSection) observer.observe(bookingSection)
+    if (magicVideoSection) observer.observe(magicVideoSection)
     if (downloadsSection) observer.observe(downloadsSection)
     if (footerSection) observer.observe(footerSection)
 
