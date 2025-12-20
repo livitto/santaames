@@ -25,13 +25,17 @@ export function MagicVideoMessage() {
   const [scriptLoaded, setScriptLoaded] = useState(false)
 
   useEffect(() => {
+    let playerScript: HTMLScriptElement | null = null
+    let embedScript: HTMLScriptElement | null = null
+    let style: HTMLStyleElement | null = null
+
     // Load Wistia scripts
-    const playerScript = document.createElement("script")
+    playerScript = document.createElement("script")
     playerScript.src = "https://fast.wistia.com/player.js"
     playerScript.async = true
     document.body.appendChild(playerScript)
 
-    const embedScript = document.createElement("script")
+    embedScript = document.createElement("script")
     embedScript.src = "https://fast.wistia.com/embed/qksyuci38w.js"
     embedScript.async = true
     embedScript.type = "module"
@@ -39,7 +43,7 @@ export function MagicVideoMessage() {
     document.body.appendChild(embedScript)
 
     // Add Wistia styles
-    const style = document.createElement("style")
+    style = document.createElement("style")
     style.innerHTML = `
       wistia-player[media-id='qksyuci38w']:not(:defined) { 
         background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/qksyuci38w/swatch'); 
@@ -51,9 +55,16 @@ export function MagicVideoMessage() {
     document.head.appendChild(style)
 
     return () => {
-      document.body.removeChild(playerScript)
-      document.body.removeChild(embedScript)
-      document.head.removeChild(style)
+      // Only remove elements if they still exist in the DOM
+      if (playerScript && document.body.contains(playerScript)) {
+        document.body.removeChild(playerScript)
+      }
+      if (embedScript && document.body.contains(embedScript)) {
+        document.body.removeChild(embedScript)
+      }
+      if (style && document.head.contains(style)) {
+        document.head.removeChild(style)
+      }
     }
   }, [])
 
@@ -71,8 +82,10 @@ export function MagicVideoMessage() {
         body: JSON.stringify(formData),
       })
 
+      const result = await response.json()
+
       if (!response.ok) {
-        throw new Error("Failed to send request")
+        throw new Error(result.error || "Failed to send request")
       }
 
       setShowConfirmation(true)
@@ -88,7 +101,7 @@ export function MagicVideoMessage() {
       })
     } catch (err) {
       console.error("[v0] Error submitting magic message request:", err)
-      setError("Failed to send request. Please try again or contact us directly.")
+      setError(err instanceof Error ? err.message : "Failed to send request. Please try again or contact us directly.")
     } finally {
       setIsSubmitting(false)
     }
@@ -121,6 +134,11 @@ export function MagicVideoMessage() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-muted-foreground">
                   Watch Santa explain how to get your personalized video message!
+                  <br />
+                  <span className="text-xs mt-1 block">
+                    Due to my professional commitments to different events and busy schedule, your video may require
+                    24-48 hours to reach your email.
+                  </span>
                 </p>
               </div>
             </div>

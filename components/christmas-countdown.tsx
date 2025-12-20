@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Gift } from "lucide-react"
+import { Gift, Video } from "lucide-react"
 import { useMobileMenu } from "@/lib/mobile-menu-context"
 
 export function ChristmasCountdown() {
@@ -92,6 +92,13 @@ export function ChristmasCountdown() {
           <span className="text-[9px] md:text-[10px] uppercase">Sec</span>
         </div>
       </div>
+      <a
+        href="#magic-video"
+        className="flex items-center justify-center gap-1 mt-2 pt-2 border-t border-[#FFD700]/30 text-[10px] md:text-xs text-[#FFD700] hover:text-white transition-colors uppercase tracking-wide font-semibold"
+      >
+        <Video className="w-3.5 h-3.5 md:w-4 md:h-4" />
+        Get Magic Message
+      </a>
     </div>
   )
 }
