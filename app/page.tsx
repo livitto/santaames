@@ -10,7 +10,7 @@ import { GettingReady } from "@/components/getting-ready"
 import { WheresSanta } from "@/components/wheres-santa"
 import { SocialMediaFeed } from "@/components/social-media-feed"
 import { Footer } from "@/components/footer"
-import { ChristmasCountdown } from "@/components/christmas-countdown"
+import { ChristmasVideoPopover } from "@/components/christmas-video-popover"
 import { Navigation } from "@/components/navigation"
 import { MobileMenuProvider } from "@/lib/mobile-menu-context"
 import { FloatingBookButton } from "@/components/floating-book-button"
@@ -20,7 +20,7 @@ import { MagicVideoMessage } from "@/components/magic-video-message"
 export default function Home() {
   return (
     <MobileMenuProvider>
-      <ChristmasCountdown />
+      <ChristmasVideoPopover />
       <Navigation />
       <main className="pt-16">
         <Hero />
