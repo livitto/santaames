@@ -6,6 +6,7 @@ import { X, Play } from "lucide-react"
 export function ChristmasVideoPopover() {
   const [isVisible, setIsVisible] = useState(false)
   const [showPreview, setShowPreview] = useState(false)
+  const [isHeroInView, setIsHeroInView] = useState(true)
 
   useEffect(() => {
     // Check if user has already seen the popover in this session
@@ -21,6 +22,24 @@ export function ChristmasVideoPopover() {
     } else {
       setShowPreview(true)
     }
+  }, [])
+
+  useEffect(() => {
+    const heroSection = document.getElementById("home")
+    if (!heroSection) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsHeroInView(entry.isIntersecting)
+        })
+      },
+      { threshold: 0.1 },
+    )
+
+    observer.observe(heroSection)
+
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
@@ -63,7 +82,7 @@ export function ChristmasVideoPopover() {
 
   return (
     <>
-      {showPreview && !isVisible && (
+      {showPreview && !isVisible && isHeroInView && (
         <button
           onClick={handleReplay}
           className="fixed top-20 right-2 md:right-4 z-[100] group cursor-pointer"
@@ -72,9 +91,14 @@ export function ChristmasVideoPopover() {
           {/* Video thumbnail background */}
           <div className="relative w-48 md:w-72 aspect-[9/16] bg-black rounded-lg shadow-lg border-2 border-[#FFD700] overflow-hidden hover:scale-105 transition-transform">
             <img
-              src="https://fast.wistia.com/embed/medias/a26z2f5kvl/swatch"
+              src="https://embed-ssl.wistia.com/deliveries/7c8e9e7e8e7e8e7e8e7e8e7e8e7e8e7e/file.jpg?image_crop_resized=960x540"
               alt="Santa's Christmas Message"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback to swatch with higher resolution if direct image fails
+                e.currentTarget.src =
+                  "https://fast.wistia.com/embed/medias/a26z2f5kvl/swatch?image_play_button=1&image_play_button_color=B71C1Ce0&image_crop_resized=960x1704"
+              }}
             />
 
             {/* Overlay gradient */}
@@ -82,8 +106,8 @@ export function ChristmasVideoPopover() {
 
             {/* Play button overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-[#B71C1C] text-white p-4 rounded-full border-2 border-white shadow-lg group-hover:bg-[#8B0000] transition-colors">
-                <Play className="w-8 h-8 fill-current" />
+              <div className="bg-[#B71C1C] text-white p-3 md:p-4 rounded-full border-2 border-white shadow-lg group-hover:bg-[#8B0000] transition-colors">
+                <Play className="w-6 h-6 md:w-8 md:h-8 fill-current" />
               </div>
             </div>
 
