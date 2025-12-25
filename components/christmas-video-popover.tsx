@@ -89,7 +89,7 @@ export function ChristmasVideoPopover() {
           aria-label="Replay Christmas video"
         >
           {/* Video thumbnail background */}
-          <div className="relative w-48 md:w-72 aspect-[9/16] bg-black rounded-lg shadow-lg border-2 border-[#FFD700] overflow-hidden hover:scale-105 transition-transform">
+          <div className="relative w-40 md:w-72 aspect-[9/16] bg-black rounded-lg shadow-lg border-2 border-[#FFD700] overflow-hidden hover:scale-105 transition-transform">
             <img
               src="https://embed-ssl.wistia.com/deliveries/7c8e9e7e8e7e8e7e8e7e8e7e8e7e8e7e/file.jpg?image_crop_resized=960x540"
               alt="Santa's Christmas Message"
